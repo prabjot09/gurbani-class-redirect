@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+<html lang="pa">
+    <head>
+        <meta charset="UTF-8"/>
+        <title> Testing Punjabi On Websites</title>
+        <script src="testpa.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+        <div id = "header"> 
+            <h1> ਪਾਠ ਕਲਾਸ ਗੁਰਬਾਣੀ ਐਪ </h1>
+            <button id="tog" name="tog" value="tog" onclick="toggleLanguage()"></button>
+        </div>
+
+        <div id="sggs">
+            <h2>Guru Granth Sahib Page:
+                <input type="text" id="pageInput" name="pageInput" placeholder="1430">
+                <button onclick="searchPage();" value="Search" name="Search">Search</button>
+            </h2>
+        </div>
+
+        <div id = "baniSelection">
+            <div class="baniOptions" id="nitnemOpt">
+                <h3 id="nitnem" class="optionsHeading"></h3>
+
+                <ul>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/japujee-saahib"><li id = "N1"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/jaap-saahib"><li id = "N2"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/tavai-prasaadh-sava'ye-(sraavag-su'dh)"><li id = "N3"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/benatee-chauapiee-saahib"><li id = "N4"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/anandh-saahib"><li id = "N5"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/raharaas-saahib"><li id = "N6"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/sohilaa-saahib"><li id = "N7"></li></a>
+                </ul>
+
+            </div>
+
+            <div class="baniOptions">
+                <div id="morningR">
+                    <h3 class = "optionsHeading"  id="rotationM"> Morning</h3>
+
+                    <ul>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/baareh-maahaa-maanjh"><li id = "RM1"></li></a>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/raamakalee-kee-vaar-(rai-balavandd-tathaa-satai)"><li id = "RM2"></li></a>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/chaubole"><li id = "RM3"></li></a>
+                        <a href="https://www.sikhitothemax.org/shabad?id=4966&type=7&source=all&highlight=57867"><li id = "RM4"></li></a>
+                        <a href="https://www.sikhitothemax.org/shabad?id=729&source=all&highlight=10141"><li id = "RM5"></li></a>
+                    </ul>
+                </div>
+
+                <div id="eveningR">
+                    <h3 class = "optionsHeading" id="rotationE"> Evening</h3>
+
+                    <ul>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/basant-kee-vaar"><li id = "RE1"></li></a>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/kuchajee"><li id = "RE2"></li></a>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/suchajee"><li id = "RE3"></li></a>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/gunavantee"><li id = "RE4"></li></a>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/laavaan"><li id = "RE5"></li></a>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/funahe-mahalaa-panjavaa"><li id = "RE6"></li></a>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/bilaaval-mahalaa-teejaa-vaar-sat"><li id = "RE7"></li></a>
+                        <a href="https://www.sikhitothemax.org/sundar-gutka/raamakalee-sadhu"><li id = "RE8"></li></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="baniOptions">
+                <h3 class="optionsHeading" id="extra">Extra Banis</h3>
+
+                <ul>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/sukhamanee-saahib"><li id = "E1"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/aasaa-dhee-vaar"><li id = "E2"></li></a>
+                    <a href="https://www.sikhitothemax.org/shabad?id=4903&q=ppsb&type=7&source=G&highlight=57607"><li id = "E3"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/salok-mahalaa-nauvaa"><li id = "E4"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/shabadh-hazaare"><li id = "E5"></li></a>
+                </ul>
+            </div>
+
+            <div class="baniOptions">
+                <h3 class="optionsHeading" id="saveiye">Saveiye</h3>
+                <ul>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/savaye-sree-mukhabaakaye-mahalaa-panjavaa---1"><li id = "S1"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/savaye-sree-mukhabaakaye-mahalaa-panjavaa---2"><li id = "S2"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/savie'ee-mahale-pahile-ke"><li id = "S3"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/savie'ee-mahale-dhooje-ke"><li id = "S4"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/savie'ee-mahale-teeje-ke"><li id = "S5"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/savie'ee-mahale-chauthe-ke"><li id = "S6"></li></a>
+                    <a href="https://www.sikhitothemax.org/sundar-gutka/savie'ee-mahale-panjave-ke"><li id = "S7"></li></a>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+
+</html>

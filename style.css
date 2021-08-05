@@ -1,0 +1,101 @@
+* {
+    color: white;
+}
+
+.baniOptions {
+    display: inline-block;
+    position: relative;
+    margin-left: 1.5%;
+    width: 19%;
+    text-align: left;
+    vertical-align: top;
+    padding: 0px 18px 0px 18px;
+    border: 4px double white;
+    border-radius: 10px;
+    
+}
+
+li {
+    font-size: 18px;
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 20px;
+}
+a {
+    text-decoration: none;
+}
+
+li:hover {
+    color: #dd7722;
+    font-size: 20px;
+}
+
+body {
+    text-align: center;
+    background-color: #222222;
+}
+
+#nitnemOpt {
+    margin-left: 0;
+}
+
+#header {
+    text-align: center;
+    border-radius: 25px;
+    margin: auto;
+    font-size: 2em;
+    height: 15%;
+    border-bottom: 8px dashed white;
+    border-bottom-style: double;
+}
+
+
+#tog {
+    margin-top: -10%;
+    margin-left: 40%;
+    position: fixed;
+}
+
+
+button {
+    color: black;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 15%;
+}
+
+button:hover {
+    background-color: black;
+    color: orange;
+    
+}
+
+.optionsHeading {
+    font-size: 25px;
+    color: orange;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#sggs {
+    padding: 3px;
+}
+
+#pageInput {
+    width: 60px;
+    height: 30px;
+    color: black;
+    font-size: 20px;
+    text-align: right;
+}
+
+h1 {
+    margin: 42px 0px 0px 0px;
+}
+
+#baniSelection {
+    padding-top: 5%;
+    background-color: black;
+}
