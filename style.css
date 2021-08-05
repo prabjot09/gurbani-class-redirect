@@ -1,5 +1,6 @@
 * {
     color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
 }
 
 .baniOptions {
@@ -22,6 +23,7 @@ li {
 
 ul {
     padding-left: 20px;
+    line-height: 1.5;
 }
 a {
     text-decoration: none;
@@ -46,16 +48,17 @@ body {
     border-radius: 25px;
     margin: auto;
     font-size: 2em;
-    height: 15%;
-    border-bottom: 8px dashed white;
+    border: 8px none white;
+    border-top-style: double;
     border-bottom-style: double;
+    background-color: #111111;
 }
 
 
 #tog {
     margin-top: -10%;
     margin-left: 40%;
-    position: fixed;
+    position: absolute;
 }
 
 
@@ -81,6 +84,8 @@ button:hover {
 
 #sggs {
     padding: 3px;
+    margin: 10px 0px 10px 0px;
+    border-bottom: 2px solid #ffffff;
 }
 
 #pageInput {
@@ -92,10 +97,12 @@ button:hover {
 }
 
 h1 {
-    margin: 42px 0px 0px 0px;
+    margin: 0px;
+    line-height: 2.5;
 }
 
 #baniSelection {
     padding-top: 5%;
+    padding-bottom: 2%;
     background-color: black;
 }
