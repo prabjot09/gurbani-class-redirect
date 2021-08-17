@@ -1,4 +1,5 @@
 var langTog = "English"; //opposite of default language
+var darkTog = 0;
 
 const sectionNames = ["nitnem", "rotationM", "rotationE", "extra banis", "saveiye"];
 
@@ -43,6 +44,18 @@ const saveiye = [["saveiye", "Bhatta De Saveiye", "ਭੱਟਾਂ ਦੇ ਸਵ
                     ["S5", "Saveiye Mahalle Teeje Ke", "ਸਵਈਏ ਮਹਲੇ ਤੀਜੇ ਕੇ"],
                     ["S6", "Saveiye Mahalle Chauthe Ke", "ਸਵਈਏ ਮਹਲੇ ਚਉਥੇ ਕੇ"],
                     ["S7", "Saveiye Mahalle Panjve Ke", "ਸਵਈਏ ਮਹਲੇ ਪੰਜਵੇ ਕੇ"]];
+
+const colorSettings = [["*", "color", "black", "white"],
+                        ["#header", "background-color", "orange", "#111111"],
+                        ["#header", "border-color", "black", "white"],
+                        ["#sggs", "border-color", "black", "white"],
+                        ["#baniSelection", "background-color", "orange", "black"],
+                        ["body", "background-color", "beige", "#222222"],
+                        [".baniOptions", "border-color", "#05f", "white"],
+                        [".optionsHeading", "color", "#05f", "orange"],
+                        ["button", "color", "black", "black"],
+                        ["#pageInput", "color", "black", "black"]];
+
 let baniNames = {};
 baniNames[sectionNames[0]] = nitnem;
 baniNames[sectionNames[1]] = rotationM;
@@ -95,12 +108,12 @@ function searchPage() {
                         Please enter a number within range 0 to 1430")
         }
         else {
-            var strPage = "";
-            for (var i = 0; i < 4; i++) {
-                strPage = (page%10) + strPage;
-                page = (page - page%10) / 10;
-            }
-            window.open("http://srigurugranth.net/" + strPage + ".html")
+            // var strPage = "";
+            // for (var i = 0; i < 4; i++) {
+            //     strPage = (page%10) + strPage;
+            //     page = (page - page%10) / 10;
+            // }
+            window.open("http://sttm.co/g/" + page);
         }
     }
 }
@@ -111,5 +124,38 @@ window.onload = function () {
     for (var i = 0; i < sectionNames.length; i++) {
         console.log(sectionNames[i]);
         setBaniNames(sectionNames[i]);
-    }      
+    }
+    toggleDarkMode();      
 }
+
+
+function toggleDarkMode() {
+    if (darkTog == 0) {
+        darkTog = 1;
+    }
+    else {
+        darkTog = 0;
+    }
+
+    for (var i = 0; i < colorSettings.length; i++) {
+        var item = colorSettings[i][0];
+        var attr = colorSettings[i][1];
+        var val = colorSettings[i][2 + darkTog];
+        $(item).css(attr , val);
+        console.log(item + " -->  " + attr + ": " + val + ";\n");
+    }
+
+    var list = ["#06f", "black", "#d72", "white"];
+    $("li").hover(function() {
+        $(this).css("color", list[2 * darkTog]);
+    }, function() {
+        $(this).css("color", list[2 * darkTog + 1]);
+    });
+
+    $("button").hover(function() {
+        $(this).css({"color": "orange", "background-color" : "black"});
+    },
+    function() {
+        $(this).css({"color": "black", "background-color": "#eeeeff"});
+    });
+} 

@@ -56,11 +56,18 @@ body {
 
 
 #tog {
-    margin-top: -10%;
+    margin-top: 2%;
     margin-left: 40%;
     position: absolute;
+    width: 7.5%;
 }
 
+#changeMode {
+    margin-top: 2%;
+    margin-left: 28%;
+    width: 10%;
+    position: absolute;
+}
 
 button {
     color: black;
@@ -80,6 +87,10 @@ button:hover {
     color: orange;
     margin-top: 20px;
     margin-bottom: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    /* border-bottom: 2px orange solid; */
+    padding: 8px 0px 8px 0px;
 }
 
 #sggs {
