@@ -1,0 +1,64 @@
+{
+    "title": {
+        "name": "nitnem",
+        "eng-label": "Nitnem",
+        "pun-label": "ਨਿਤਨੇਮ"
+    },
+    "bani-list": [
+        {
+            "codeName": "N1",
+            "eng-label": "Jap Ji Sahib",
+            "pun-label": "ਜਪ ਜੀ ਸਾਹਿਬ",
+            "sundar-gutka": true,
+            "link": "japujee-saahib"
+        },
+    
+        {
+            "codeName": "N2",
+            "eng-label": "Jaap Sahib",
+            "pun-label": "ਜਾਪ ਸਾਹਿਬ",
+            "sundar-gutka": true,
+            "link": "jaap-saahib"
+        },
+            
+        {
+            "codeName": "N3",
+            "eng-label": "Tav Prasaad Saveiye",
+            "pun-label": "ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸਵੱਯੇ",
+            "sundar-gutka": true,
+            "link": "tavai-prasaadh-sava'ye-(sraavag-su'dh)"
+        },
+
+        {
+            "codeName": "N4",
+            "eng-label": "Benti Chaupee",
+            "pun-label": "ਕਬਯੋ ਬਾਚ ਬੇਨਤੀ ਚੋਪਈ",
+            "sundar-gutka": true,
+            "link": "benatee-chauapiee-saahib"
+        },
+
+        {
+            "codeName": "N5",
+            "eng-label": "Anand Sahib",
+            "pun-label": "ਅਨੰਦੁ ਸਾਹਿਬ",
+            "sundar-gutka": true,
+            "link": "anandh-saahib"
+        },
+
+        {
+            "codeName": "N6",
+            "eng-label": "Rehraas Sahib",
+            "pun-label": "ਰਹਰਾਸਿ ਸਾਹਿਬ",
+            "sundar-gutka": true,
+            "link": "raharaas-saahib"
+        },
+            
+        {
+            "codeName": "N7",
+            "eng-label": "Sohila Sahib",
+            "pun-label": "ਸੋਹਿਲਾ ਸਾਹਿਬ",
+            "sundar-gutka": true,
+            "link": "sohilaa-saahib"
+        }
+    ]
+}

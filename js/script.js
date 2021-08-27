@@ -46,14 +46,13 @@ const saveiye = [["saveiye", "Bhatta De Saveiye", "ਭੱਟਾਂ ਦੇ ਸਵ
                     ["S7", "Saveiye Mahalle Panjve Ke", "ਸਵਈਏ ਮਹਲੇ ਪੰਜਵੇ ਕੇ"]];
 
 const colorSettings = [["*", "color", "black", "white"],
-                        ["#header", "background-color", "orange", "#111111"],
-                        ["#header", "border-color", "black", "white"],
+                        ["header", "background-color", "orange", "#111111"],
+                        ["header", "border-color", "black", "white"],
                         ["#sggs", "border-color", "black", "white"],
                         ["#baniSelection", "background-color", "orange", "black"],
                         ["body", "background-color", "beige", "#222222"],
-                        [".baniOptions", "border-color", "#05f", "white"],
+                        [".baniOptions", "border-color", "#05f", "orange"],
                         [".optionsHeading", "color", "#05f", "orange"],
-                        ["button", "color", "black", "black"],
                         ["#pageInput", "color", "black", "black"]];
 
 let baniNames = {};
@@ -70,10 +69,8 @@ function setBaniNames(section) {
     } 
 
     var labels = baniNames[section];
-    console.log(baniNames[section]);
     document.getElementById(labels[0][0]).innerHTML = labels[0][lang];
     for (var i = 1; i < labels.length; i++) {
-        console.log(labels[i][0]);
         document.getElementById(labels[i][0]).innerHTML = labels[i][lang];
     }
 }
@@ -102,7 +99,6 @@ function searchPage() {
     } 
     else {
         page = parseInt(page);
-        console.log(page);
         if (page < 0 || page > 1430) {
             window.alert("Error: The page value " + page + " is not within 0 and 1430! \n \
                         Please enter a number within range 0 to 1430")
@@ -122,7 +118,6 @@ function searchPage() {
 window.onload = function () {
     toggleLanguage();
     for (var i = 0; i < sectionNames.length; i++) {
-        console.log(sectionNames[i]);
         setBaniNames(sectionNames[i]);
     }
     toggleDarkMode();      
@@ -142,7 +137,6 @@ function toggleDarkMode() {
         var attr = colorSettings[i][1];
         var val = colorSettings[i][2 + darkTog];
         $(item).css(attr , val);
-        console.log(item + " -->  " + attr + ": " + val + ";\n");
     }
 
     var list = ["#06f", "black", "#d72", "white"];
@@ -159,3 +153,80 @@ function toggleDarkMode() {
         $(this).css({"color": "black", "background-color": "#eeeeff"});
     });
 } 
+
+
+// Version 2 Code
+(function (global) {
+
+var sections = ["nitnem", "rotationM", "rotationE", "extra-banis", "saveiye"];
+var optionsHtmlUrl = "snippets/options-list-item-snippet.html";
+var baniListHtmlUrl = "snippets/bani-list-item-snippet.html";
+
+function insertIntoHTML(html, toReplace, replaceWith) {
+    toReplace = "{{" + toReplace + "}}";
+    html = html.replace(new RegExp(toReplace, "g"), replaceWith);
+    return html;
+}
+
+document.addEventListener("DOMContentLoaded", function (event) {
+
+    window.$ajaxUtils.sendGetRequest(optionsHtmlUrl, buildOptionsList, false);
+
+    function buildOptionsList(optionsHTML) {
+        console.log(optionsHTML);
+        var htmlToInsert = "<h2>Bani Options</h2><ul>";
+        for (var i = 0; i < sections.length; i++) {
+            var optionsCopy = optionsHTML;
+            optionsCopy = insertIntoHTML(optionsCopy, "optionLoadBanis", "$declare.loadItems('" + sections[i] + "');");
+            optionsCopy = insertIntoHTML(optionsCopy, "optionTitle", sections[i]);
+            htmlToInsert += optionsCopy;
+        }
+
+        console.log(htmlToInsert);
+        htmlToInsert += "</ul>";
+        document.querySelector("#options").innerHTML = htmlToInsert;
+    }    
+
+    declare.loadItems("nitnem");
+
+});
+
+var declare = {};
+
+
+
+declare.loadItems = function (sectionName) {
+    global.$ajaxUtils.sendGetRequest(
+        "data/" + sectionName + "-data.json",
+        createBaniLinks,
+        true);
+};
+
+function createBaniLinks(sectionData) {
+    document.querySelector("#sectionTitle").textContent = sectionData["title"]["pun-label"];
+    var linkHTML = "";
+    var baniList = sectionData["bani-list"];
+
+    window.$ajaxUtils.sendGetRequest(
+        baniListHtmlUrl,
+        function (baniListHtml) {
+            for (var i = 0; i < baniList.length; i++) {
+                var listItemBuild = insertIntoHTML(baniListHtml, "baniName", baniList[i]["pun-label"]);
+                var link = "https://www.sikhitothemax.org/";
+                if (baniList[i]["sundar-gutka"] == true) {
+                    link += "sundar-gutka/";
+                }
+                listItemBuild = insertIntoHTML(listItemBuild, "baniLink", link + baniList[i]["link"]);
+
+                linkHTML += listItemBuild;
+            }
+            console.log(linkHTML);
+            document.querySelector("#baniList > ul").innerHTML = linkHTML;
+        },
+        false);
+}
+
+global.$declare = declare;
+}) (window);
+
+

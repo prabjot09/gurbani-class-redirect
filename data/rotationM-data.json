@@ -1,0 +1,48 @@
+{
+    "title": {
+        "name": "rotationM",
+        "eng-label": "Morning Banis After Nitnem",
+        "pun-label": "ਨਿਤਨੇਮ ਤੋਂ ਬਾਅਦ ਸਵੇਰ ਦੀਆਂ ਬਾਣੀਆਂ"
+    },
+    "bani-list": [
+        {
+            "codeName": "RM1",
+            "eng-label": "Barah Maha Maaj",
+            "pun-label": "ਬਾਰਹ ਮਾਹਾ ਮਾਂਝ",
+            "sundar-gutka": true,
+            "link": "baareh-maahaa-maanjh"
+        },
+    
+        {
+            "codeName": "RM2",
+            "eng-label": "Ramkali Ki Vaar",
+            "pun-label": "ਰਾਮਕਲੀ ਕੀ ਵਾਰ (ਰਾਇ ਬਲਵੰਡਿ ਤਥਾ ਸਤੈ)",
+            "sundar-gutka": true,
+            "link": "raamakalee-kee-vaar-(rai-balavandd-tathaa-satai)"
+        },
+            
+        {
+            "codeName": "RM3",
+            "eng-label": "Choubole",
+            "pun-label": "ਚਉਬੋਲੇ",
+            "sundar-gutka": true,
+            "link": "chaubole"
+        },
+
+        {
+            "codeName": "RM4",
+            "eng-label": "Mahalla 5 Gatha",
+            "pun-label": "ਮਹਲਾ ੫ ਗਾਥਾ",
+            "sundar-gutka": true,
+            "link": "shabad?id=4966&type=7&source=all&highlight=57867"
+        },
+
+        {
+            "codeName": "RM5",
+            "eng-label": "Karhale",
+            "pun-label": "ਕਰਹਲੇ",
+            "sundar-gutka": true,
+            "link": "shabad?id=729&source=all&highlight=10141"
+        }
+    ]
+}

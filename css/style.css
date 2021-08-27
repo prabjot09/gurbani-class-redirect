@@ -1,0 +1,187 @@
+* {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+}
+
+/* ------------------------- Header ---------------- */
+header {
+    border-radius: 25px;
+    border: 8px none white;
+    border-top-style: double;
+    border-bottom-style: double;
+    padding: 15px;
+    background-color: #111111;
+    overflow:hidden;
+}
+
+#optionsMenu {
+    margin-top: 15px;
+}
+
+#optionsMenu > button {
+    display: block;
+    border-radius: 15%;
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+button {
+    background-color: black;
+    color: orange;
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 10%;    
+}
+
+#changeMode {
+    clear: right;
+}
+
+#siteTitle {
+    min-height: 120px;
+}
+
+h1 {
+    margin: 0px;
+    font-size: 3.5em;
+    min-height: 70px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* ----------------- Header END ---------------- */
+
+.baniOptions {
+    display: inline-block;
+    position: relative;
+    margin-left: 1.5%;
+    width: 19%;
+    text-align: left;
+    vertical-align: top;
+    padding: 0px 18px 0px 18px;
+    border: 4px double white;
+    border-radius: 10px;
+    
+}
+
+li {
+    font-size: 18px;
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 20px;
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+}
+
+li:hover {
+    color: #dd7722;
+    font-size: 20px;
+}
+
+body {
+    text-align: center;
+    background-color: #222222;
+}
+
+#nitnemOpt {
+    margin-left: 0;
+}
+
+.optionsHeading {
+    font-size: 25px;
+    color: orange;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    /* border-bottom: 2px orange solid; */
+    padding: 8px 0px 8px 0px;
+}
+
+#sggs {
+    padding: 15px 0px;
+    margin: 10px;
+    /* border-bottom: 2px solid #ffffff; */
+}
+
+#pageInput {
+    width: 60px;
+    height: 30px;
+    color: black;
+    font-size: 20px;
+    text-align: right;
+}
+
+
+
+#baniSelection {
+    padding-top: 5%;
+    padding-bottom: 2%;
+    background-color: black;
+}
+
+#linkArea {
+    text-align: left;
+    position: relative;
+    padding: 0px;
+}
+
+#options {
+    background-color: #aaa;
+}
+
+#baniList {
+    background-color: black;
+}
+
+#options > ul > li {
+    font-size: 2em;
+}
+
+#baniList > ul > a > li {
+    font-size: 1.6em;
+}
+
+#linkArea > div div {
+    height: 350px;
+}
+
+@media (min-width: 768px) {
+    #baniList > button {
+        display: none;
+    }
+
+    #options {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    #options {
+        position:absolute;
+        width: 80%;
+    }
+    #baniList > button {
+        float: right;
+        width: 20%;
+    }
+}
+
+@media (max-width: 575px) {
+    #options > ul > li{
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    #options > ul > li {
+        font-size: 1.8em;
+    }
+}

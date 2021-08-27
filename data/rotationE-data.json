@@ -1,0 +1,72 @@
+{
+    "title": {
+        "name": "rotationE",
+        "eng-label": "Evening Banis After Nitnem",
+        "pun-label": "ਨਿਤਨੇਮ ਤੋਂ ਬਾਅਦ ਸ਼ਾਮ ਦੀਆਂ ਬਾਣੀਆਂ"
+    },
+    "bani-list": [
+        {
+            "codeName": "RE1",
+            "eng-label": "Basant Ki Vaar",
+            "pun-label": "ਬਸੰਤ ਕੀ ਵਾਰ",
+            "sundar-gutka": true,
+            "link": "basant-kee-vaar"
+        },
+    
+        {
+            "codeName": "RE2",
+            "eng-label": "Kuchaji",
+            "pun-label": "ਕੁਚਜੀ",
+            "sundar-gutka": true,
+            "link": "kuchajee"
+        },
+            
+        {
+            "codeName": "RE3",
+            "eng-label": "Suchaji",
+            "pun-label": "ਸੁਚਜੀ",
+            "sundar-gutka": true,
+            "link": "suchajee"
+        },
+
+        {
+            "codeName": "RE4",
+            "eng-label": "Gunvanti",
+            "pun-label": "ਗੁਣਵੰਤੀ",
+            "sundar-gutka": true,
+            "link": "gunavantee"
+        },
+
+        {
+            "codeName": "RE5",
+            "eng-label": "Lavaan",
+            "pun-label": "ਲਾਵਾਂ",
+            "sundar-gutka": true,
+            "link": "laavaan"
+        },
+
+        {
+            "codeName": "RE6",
+            "eng-label": "Funhe Mahalla 5",
+            "pun-label": "ਫੁਨਹੇ ਮਹਲਾ ੫",
+            "sundar-gutka": true,
+            "link": "funahe-mahalaa-panjavaa"
+        },
+            
+        {
+            "codeName": "RE7",
+            "eng-label": "Vaar Sat",
+            "pun-label": "ਵਾਰ ਸਤ",
+            "sundar-gutka": true,
+            "link": "bilaaval-mahalaa-teejaa-vaar-sat"
+        },
+
+        {
+            "codeName": "RE8",
+            "eng-label": "Ramkali Sad",
+            "pun-label": "ਰਾਮਕਲੀ ਸਦੁ",
+            "sundar-gutka": true,
+            "link": "raamakalee-sadhu"
+        }
+    ]
+}

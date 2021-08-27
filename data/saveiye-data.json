@@ -1,0 +1,64 @@
+{
+    "title": {
+        "name": "saveiye",
+        "eng-label": "Saveiye (Bhatta De)",
+        "pun-label": "ਸਵੱਯੇ (ਭੱਟਾਂ ਦੇ)"
+    },
+    "bani-list": [
+        {
+            "codeName": "S1",
+            "eng-label": "Saveiye Sri Mukhbak Mahalla 5-1",
+            "pun-label": "ਸਵੱਯੇ ਸ੍ਰੀ ਮੁਖਬਾਕ੍ਯ ਮਹਲਾ ੫ - ੧",
+            "sundar-gutka": true,
+            "link": "savaye-sree-mukhabaakaye-mahalaa-panjavaa---1"
+        },
+    
+        {
+            "codeName": "S2",
+            "eng-label": "Saveiye Sri Mukhbak Mahalla 5-2",
+            "pun-label": "ਸਵੱਯੇ ਸ੍ਰੀ ਮੁਖਬਾਕ੍ਯ ਮਹਲਾ ੫ - ੨",
+            "sundar-gutka": true,
+            "link": "savaye-sree-mukhabaakaye-mahalaa-panjavaa---2"
+        },
+            
+        {
+            "codeName": "S3",
+            "eng-label": "Saveiye Mahalle Pehle Ke",
+            "pun-label": "ਸਵਈਏ ਮਹਲੇ ਪਹਿਲੇ ਕੇ",
+            "sundar-gutka": true,
+            "link": "savie'ee-mahale-pahile-ke"
+        },
+
+        {
+            "codeName": "S4",
+            "eng-label": "Saveiye Mahalle Dooje Ke",
+            "pun-label": "ਸਵਈਏ ਮਹਲੇ ਦੂਜੇ ਕੇ",
+            "sundar-gutka": true,
+            "link": "savie'ee-mahale-dhooje-ke"
+        },
+
+        {
+            "codeName": "S5",
+            "eng-label": "Saveiye Mahalle Teeje Ke",
+            "pun-label": "ਸਵਈਏ ਮਹਲੇ ਦੂਜੇ ਕੇ",
+            "sundar-gutka": true,
+            "link": "savie'ee-mahale-teeje-ke"
+        },
+
+        {
+            "codeName": "S6",
+            "eng-label": "Saveiye Mahalle Chouthe Ke",
+            "pun-label": "ਸਵਈਏ ਮਹਲੇ ਚਉਥੇ ਕੇ",
+            "sundar-gutka": true,
+            "link": "savie'ee-mahale-chauthe-ke"
+        },
+            
+        {
+            "codeName": "S7",
+            "eng-label": "Saveiye Mahalle Panjve Ke",
+            "pun-label": "ਸਵਈਏ ਮਹਲੇ ਪੰਜਵੇ ਕੇ",
+            "sundar-gutka": true,
+            "link": "savie'ee-mahale-panjave-ke"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "title": {
+        "name": "extra-banis",
+        "eng-label": "Extra Banis",
+        "pun-label": "ਵਾਧੂ ਬਾਣੀਆਂ"
+    },
+    "bani-list": [
+        {   
+            "codeName": "E1",
+            "eng-label": "Sukhmani Sahib",
+            "pun-label": "ਸੁਖਮਨੀ ਸਾਹਿਬ",
+            "sundar-gutka": true, 
+            "link": "sukhamanee-saahib"
+        },
+
+        {
+            "codeName": "E2",
+            "eng-label": "Asa Di Vaar",
+            "pun-label": "ਆਸਾ ਦੀ ਵਾਰ",
+            "sundar-gutka": true,
+            "link": "aasaa-dhee-vaar"
+        },
+
+        {
+            "codeName": "E3",
+            "eng-label": "Salok Sehaskritti",
+            "pun-label": "ਸਲੋਕ ਸਹਸਕ੍ਰਿਤੀ",
+            "sundar-gutka": false,
+            "link": "shabad?id=4903&q=ppsb&type=7&source=G&highlight=57607"
+        },
+    
+        {
+            "name": "E4",
+            "eng-label": "Salok Mahalla 9",
+            "pun-label": "ਸਲੋਕ ਮਹਲਾ ੯",
+            "sundar-gutka": true,
+            "link": "salok-mahalaa-nauvaa"
+        },
+    
+        {
+            "name": "E5",
+            "eng-label": "Shabad Hazare",
+            "pun-label": "ਸ਼ਬਦ ਹਜ਼ਾਰੇ",
+            "sundar-gutka": true,
+            "link": "shabadh-hazaare"
+        }
+    ]
+}

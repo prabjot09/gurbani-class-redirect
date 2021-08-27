@@ -2,28 +2,49 @@
 <html lang="pa">
     <head>
         <meta charset="UTF-8"/>
-        <title> Testing Punjabi On Websites</title>
-        <script src="script.js"></script>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-        <link rel="icon" href="https://i.pinimg.com/originals/e7/87/e5/e787e58df47432cee5ecc39048a42c98.jpg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Gurbani Link App </title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="js/ajaxUtils.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="https://i.pinimg.com/originals/e7/87/e5/e787e58df47432cee5ecc39048a42c98.jpg" />
 
     </head>
 
     <body>
-        <div id = "header"> 
-            <button id="tog" name="tog" value="tog" onclick="toggleLanguage()"></button>
-            <button id="changeMode" onclick="toggleDarkMode()"> Change Mode </button>
-            <h1> ਪਾਠ ਕਲਾਸ ਗੁਰਬਾਣੀ ਐਪ </h1>
-        </div>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12" id="siteTitle">
+                    <h1 class="text-center"> ਗੁਰਬਾਣੀ ਕਲਾਸ ਐਪ </h1>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12" id="optionsMenu">
+                    <button id="tog" name="tog" value="tog" onclick="toggleLanguage()"></button>
+                    <button id="changeMode" onclick="toggleDarkMode()"> Change Mode </button>
+                </div>
+            </div> 
+        </header>
 
         <div id="sggs">
-            <h2>Guru Granth Sahib Page:
-                <input type="text" id="pageInput" name="pageInput" placeholder="1430">
-                <button onclick="searchPage();" value="Search" name="Search">Search</button>
-            </h2>
+            <h2 class="d-inline">Guru Granth Sahib Page:</h2>
+            <input type="text" id="pageInput" name="pageInput" placeholder="1430">
+            <button onclick="searchPage();" value="Search" name="Search">Search</button>
         </div>
 
+        <div class="container" id="linkArea" style="margin-top: 5px;">
+            <div class="row">
+                <div id="options" class="col-md-6 collapse"> </div>
+                <div id="baniList" class="col-xs-12 col-md-6">
+                    <button type="button" data-bs-toggle="collapse" data-bs-target="#options" aria-expanded="false" aria-controls="options">Open Options</button>
+                    <span id="sectionTitle">Title</span>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Old Version of Site
         <div id = "baniSelection">
             <div class="baniOptions" id="nitnemOpt">
                 <h3 id="nitnem" class="optionsHeading"></h3>
@@ -94,6 +115,7 @@
                 </ul>
             </div>
         </div>
+        -->
 
     </body>
 
