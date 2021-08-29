@@ -1,6 +1,6 @@
 * {
     color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    font-family: "Urbanist", sans-serif;
 }
 
 /* ------------------------- Header ---------------- */
@@ -54,55 +54,19 @@ h1 {
 
 /* ----------------- Header END ---------------- */
 
-.baniOptions {
-    display: inline-block;
-    position: relative;
-    margin-left: 1.5%;
-    width: 19%;
-    text-align: left;
-    vertical-align: top;
-    padding: 0px 18px 0px 18px;
-    border: 4px double white;
-    border-radius: 10px;
-    
-}
+
 
 li {
-    font-size: 18px;
     list-style-type: none;
 }
 
-ul {
-    padding-left: 20px;
-    line-height: 1.5;
-}
 a {
     text-decoration: none;
 }
 
-li:hover {
-    color: #dd7722;
-    font-size: 20px;
-}
-
 body {
     text-align: center;
-    background-color: #222222;
-}
-
-#nitnemOpt {
-    margin-left: 0;
-}
-
-.optionsHeading {
-    font-size: 25px;
-    color: orange;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    /* border-bottom: 2px orange solid; */
-    padding: 8px 0px 8px 0px;
+    background-color: #f72;
 }
 
 #sggs {
@@ -121,10 +85,8 @@ body {
 
 
 
-#baniSelection {
-    padding-top: 5%;
-    padding-bottom: 2%;
-    background-color: black;
+.row {
+    margin: 0px 3px;
 }
 
 #linkArea {
@@ -134,24 +96,71 @@ body {
 }
 
 #options {
-    background-color: #aaa;
-}
-
-#baniList {
-    background-color: black;
-}
-
-#options > ul > li {
+    background-color: #000;
+    padding: 0px;
     font-size: 2em;
 }
 
-#baniList > ul > a > li {
-    font-size: 1.6em;
+#baniList {
+    background-color: #181818;
+    font-size: 2em;
+    padding: 0px
 }
 
-#linkArea > div div {
-    height: 350px;
+#sectionTitle, #options > h2 {
+    font-size: 1.4em;
+    padding-top: 20px;
+    padding-bottom: 15px;
 }
+
+#sectionTitle {
+    color: #f72;
+    float: left;
+    width: 100%;
+    background-color: #111;
+}
+
+#options > ul {
+    margin-left: 16px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 2px;
+    background-color: #111;
+}
+
+#options > h2 {
+    margin: 0px;
+}
+
+#options > ul > a > li {
+    padding: 8px 0px 8px 30px;
+    line-height: 1.6;
+}
+
+#options > ul > a > li:hover {
+    background-color: #282828;
+}
+
+#baniList > ul > li > a {
+    color: orange;
+}
+
+#baniList > ul > li > a:hover {
+    color: #f72;
+}
+
+#baniList > ul {
+    clear: both;
+    line-height: 1.6;
+}
+
+#baniList > button {
+    float: right;
+}
+
+/* #linkArea > div div {
+    height: 350px;
+} */
 
 @media (min-width: 768px) {
     #baniList > button {
@@ -166,22 +175,100 @@ body {
 @media (max-width: 767px) {
     #options {
         position:absolute;
-        width: 80%;
+        width: 99%;
     }
     #baniList > button {
         float: right;
         width: 20%;
     }
+    #sectionTitle {
+        width: 80%;
+    }
 }
 
+
 @media (max-width: 575px) {
-    #options > ul > li{
-        font-size: 1.4em;
+    #options > ul > a > li{
+        font-size: 0.7em;
+    }
+
+    #baniList > ul > li > a {
+        font-size: 0.7em;
+    }
+
+    #baniList > ul {
+        line-height: 1.2;
+    }
+    /* #baniList > button {
+        width: 70px;
+    } */
+    #sectionTitle {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    #options > ul > a > li {
+        font-size: 0.9em;
+    }
+    #baniList > ul {
+        line-height: 1.8;
+    }
+    #sectionTitle {
+        font-size: 1.2em;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-    #options > ul > li {
-        font-size: 1.8em;
+    #options > ul > a > li {
+        font-size: 0.9em;
+    }
+    #sectionTitle {
+        font-size: 0.9em;
     }
 }
+
+
+/* .baniOptions {
+    display: inline-block;
+    position: relative;
+    margin-left: 1.5%;
+    width: 19%;
+    text-align: left;
+    vertical-align: top;
+    padding: 0px 18px 0px 18px;
+    border: 4px double white;
+    border-radius: 10px;
+    
+} */
+
+/* li:hover {
+    color: #dd7722;
+    font-size: 20px;
+} */
+
+/* 
+#nitnemOpt {
+    margin-left: 0;
+} */
+
+/* .optionsHeading {
+    font-size: 25px;
+    color: orange;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 8px 0px 8px 0px;
+} */
+
+/* ul {
+    padding-left: 20px;
+    line-height: 1.5;
+} */
+
+/* #baniSelection {
+    padding-top: 5%;
+    padding-bottom: 2%;
+    background-color: black;
+} */
