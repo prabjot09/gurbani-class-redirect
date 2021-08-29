@@ -212,6 +212,7 @@ var optionsHtmlUrl = "snippets/options-list-item-snippet.html";
 var baniListHtmlUrl = "snippets/bani-list-item-snippet.html";
 var declare = {};
 
+declare.currLang = null;
 declare.activeElement = null;
 const noHover = "#111";
 const onHover = "#222";
@@ -260,7 +261,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         console.log("options Height: " + declare.optionsListHeight);
         
         declare.activeElement = "nitnem";
-        declare.loadItems("nitnem");
+        declare.currLang = "eng-label";
+        declare.toggleLanguageLabels();     
     }   
 
 });
@@ -268,17 +270,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 declare.loadItems = function (sectionName) {
+    var lang = $declare.currLang;
     global.$ajaxUtils.sendGetRequest(
         "data/" + sectionName + "-data.json",
-        createBaniLinks,
+        function (response) {
+            console.log(lang);
+            createBaniLinks(response, lang);
+        },
         true);
     highlightActiveElement(sectionName);
 };
 
 
 
-function createBaniLinks(sectionData) {
-    document.querySelector("#sectionTitle").textContent = sectionData["title"]["pun-label"];
+function createBaniLinks(sectionData, currLang) {
+    document.querySelector("#sectionTitle").textContent = sectionData["title"][currLang];
     var linkHTML = "";
     var baniList = sectionData["bani-list"];
 
@@ -286,7 +292,7 @@ function createBaniLinks(sectionData) {
         baniListHtmlUrl,
         function (baniListHtml) {
             for (var i = 0; i < baniList.length; i++) {
-                var listItemBuild = insertIntoHTML(baniListHtml, "baniName", baniList[i]["pun-label"]);
+                var listItemBuild = insertIntoHTML(baniListHtml, "baniName", baniList[i][currLang]);
                 var link = "https://www.sikhitothemax.org/";
                 if (baniList[i]["sundar-gutka"] == true) {
                     link += "sundar-gutka/";
@@ -314,7 +320,22 @@ function createBaniLinks(sectionData) {
         false);
 }
 
+declare.toggleLanguageLabels = function() {
+    if ($declare.currLang == "pun-label") {
+        $declare.currLang = "eng-label";
+        document.querySelector("#toggleLang").innerHTML = "To Punjabi";
+    }
+    else {
+        $declare.currLang = "pun-label";
+        document.querySelector("#toggleLang").innerHTML = "To English";
+    }
 
+    for (var i = 0; i < sections.length; i++) {
+        document.querySelector("#" + sections[i]["sec-name"]).innerHTML = sections[i][$declare.currLang];
+    }
+
+    $declare.loadItems($declare.activeElement);
+};
 
 global.$declare = declare;
 }) (window);

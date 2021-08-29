@@ -24,14 +24,14 @@
                     <h1 class="text-center"> ਗੁਰਬਾਣੀ ਕਲਾਸ ਐਪ </h1>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12" id="optionsMenu">
-                    <button id="tog" name="tog" value="tog" onclick="toggleLanguage()"></button>
-                    <button id="changeMode" onclick="toggleDarkMode()"> Change Mode </button>
+                    <button id="toggleLang" name="tog" value="tog" onclick="$declare.toggleLanguageLabels();"></button>
+                    <button id="changeMode" onclick="toggleDarkMode();"> Change Mode </button>
                 </div>
             </div> 
         </header>
 
         <div id="sggs">
-            <h2 class="d-inline">Guru Granth Sahib Page:</h2>
+            <h2>Guru Granth Sahib Page:</h2>
             <input type="text" id="pageInput" name="pageInput" placeholder="1430">
             <button onclick="searchPage();" value="Search" name="Search">Search</button>
         </div>
