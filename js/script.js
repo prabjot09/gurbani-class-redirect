@@ -91,28 +91,28 @@
 //     }
 // }
 
-// function searchPage() {
-//     var page = document.getElementById("pageInput").value;
-//     if (typeof(parseInt(page)) != "number" || parseFloat(page) != Math.floor(parseInt(page))) {
-//         window.alert("Error: The page value " + page + " is invalid. \n \
-//                     Please enter a number with no decimals");
-//     } 
-//     else {
-//         page = parseInt(page);
-//         if (page < 0 || page > 1430) {
-//             window.alert("Error: The page value " + page + " is not within 0 and 1430! \n \
-//                         Please enter a number within range 0 to 1430")
-//         }
-//         else {
-//             // var strPage = "";
-//             // for (var i = 0; i < 4; i++) {
-//             //     strPage = (page%10) + strPage;
-//             //     page = (page - page%10) / 10;
-//             // }
-//             window.open("http://sttm.co/g/" + page);
-//         }
-//     }
-// }
+function searchPage() {
+    var page = document.getElementById("pageInput").value;
+    if (typeof(parseInt(page)) != "number" || parseFloat(page) != Math.floor(parseInt(page))) {
+        window.alert("Error: The page value " + page + " is invalid. \n \
+                    Please enter a number with no decimals");
+    } 
+    else {
+        page = parseInt(page);
+        if (page < 0 || page > 1430) {
+            window.alert("Error: The page value " + page + " is not within 0 and 1430! \n \
+                        Please enter a number within range 0 to 1430")
+        }
+        else {
+            // var strPage = "";
+            // for (var i = 0; i < 4; i++) {
+            //     strPage = (page%10) + strPage;
+            //     page = (page - page%10) / 10;
+            // }
+            window.open("http://sttm.co/g/" + page);
+        }
+    }
+}
 
 
 // window.onload = function () {
